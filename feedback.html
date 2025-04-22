@@ -1,0 +1,33 @@
+<!-- 2.uzdevums (Atsauksmes forma)
+Izveidojiet jaunu failu 'feedback.html' blakus 'index.php' failam.
+'feedback.html' failā izveidojiet boilerplate kodu, kurā ir arī kontaktu forma ar trim laukiem: vārds, e-pasts un ziņa jeb atsauksmes teksts. 
+Apstiprinot formu, tās datus aizsūtiet uz citu jaunu failu 'contact-sent.php', kurā lietotājs tiek informēts par veiksmīgu kontaktu formas aizpildīšanu un tiek attēloti nosūtītie dati. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="contact-sent.php" method="POST">
+      <div>
+        <label for="name">Vārds:</label>
+        <input type="text" id="name" name="name" required />
+      </div>
+
+      <div>
+        <label for="email">E-pasts:</label>
+        <input type="email" id="email" name="email"  />
+      </div>
+
+      <div>
+        <label for="message">Atsauksme:</label>
+        <input type="text" id="message" name="message" required></input>
+      </div>
+
+      <button type="submit">Nosūtīt</button>
+    </form>
+  </body>
+</html>
