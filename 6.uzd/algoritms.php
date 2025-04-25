@@ -51,6 +51,7 @@ foreach ($orders as $order) {
     // Ja šis pasūtījuma ID vēl nav apstrādāts
     if (!isset($processedOrders[$orderId])) {
         // Izveidot jaunu ierakstu rezultātu masīvā
+        
         $newOrder = [
             'order_id' => $orderId,
             'customer' => $order['customer'],
@@ -70,9 +71,18 @@ foreach ($orders as $order) {
 }
 
 // Izvadīt rezultātu
-echo '<pre>';
-print_r($groupedOrders);
+ echo '<pre>';
+ print_r($groupedOrders);
 echo '</pre>';
 
-
+// Izvadīt rezultātu ar foreach
+foreach ($groupedOrders as $order) {
+    echo "Pasūtījums ID: " . $order['order_id'] . "\n";
+    echo "Klients: " . $order['customer'] . "\n";
+    echo "Produkti: \n";
+    
+    foreach ($order['products'] as $product) {
+        echo "  - " . $product . "\n";
+    }
+}
 ?>
