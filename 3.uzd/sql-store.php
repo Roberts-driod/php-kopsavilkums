@@ -45,14 +45,6 @@ try {
 
 
 
-
-
-
-
-
-
-
-
  catch(PDOException $e) {
     echo "Savienojuma kļūda: " . $e->getMessage();
 }
