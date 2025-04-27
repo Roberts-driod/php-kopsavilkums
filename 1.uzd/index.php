@@ -20,7 +20,7 @@ $settings = [
 
 foreach ($settings as $key => $value) {
     //echo "{$key}: {$value}; ";
-    echo $key . " {$value }; ";
+    echo $key . $value;
 }
 
 
